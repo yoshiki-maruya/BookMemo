@@ -2,7 +2,7 @@ import React from "react";
 import SideMenuLink from "../commons/atoms/SideMenuLink";
 import { useNavigate } from 'react-router-dom';
 
-const Home = () => {
+const Home: React.FC = () => {
   const navigate = useNavigate();
   const handleClick = React.useCallback((_: React.MouseEvent<HTMLLIElement, MouseEvent> | React.SyntheticEvent<HTMLElement, Event>, data: string | undefined) => {
     if (data) navigate(data);

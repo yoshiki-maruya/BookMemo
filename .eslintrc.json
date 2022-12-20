@@ -23,5 +23,6 @@
         "tailwindcss"
     ],
     "rules": {
+        "react/display-name": "off"
     }
 }

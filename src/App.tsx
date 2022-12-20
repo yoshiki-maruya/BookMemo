@@ -1,9 +1,16 @@
 import React from 'react'
-import Home from './components/pages/Home'
 
-function App() {
+interface IAppProps {
+  children: React.ReactNode,
+}
+
+const App: React.FC<IAppProps> = ({
+  children
+}) => {
   return (
-    <Home />
+    <>
+      {children}
+    </>
   )
 }
 

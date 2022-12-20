@@ -13,7 +13,12 @@ const Home = () => {
       <aside className="h-full w-full bg-blue-200 lg:w-1/5">
         <h1 className="mt-4 text-center text-3xl">BookMemo</h1>
         <ul className="mt-10 grid gap-y-8 text-center">
-          <SideMenuLink onClick={(event) => handleClick(event, '/create')}>Create</SideMenuLink>
+          <SideMenuLink
+            onClick={(event) => handleClick(event, '/create')}
+            className="cursor-pointer"
+          >
+            Create
+          </SideMenuLink>
           <li>Read</li>
           <li>Update</li>
           <li>Delete</li>

@@ -8,7 +8,7 @@ type SideMenuLinkProps = React.ComponentPropsWithRef<"li"> & {
 
 const SideMenuLink = React.forwardRef<HTMLLIElement, SideMenuLinkProps>(
   ({ className, onClick, children }, ref) => {
-    return <li onClick={onClick} ref={ref} className={className}>{children}</li>
+    return <li data-testid="li" onClick={onClick} ref={ref} className={className}>{children}</li>
   }
 )
 

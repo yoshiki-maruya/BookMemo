@@ -5,6 +5,6 @@ import {
 
 const router: Router = express.Router();
 
-router.post('/books', createBook);
+router.post('/book', createBook);
 
 export default router;

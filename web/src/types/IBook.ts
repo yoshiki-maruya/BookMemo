@@ -1,6 +1,6 @@
 interface IBook {
-  title: string,
-  content: string,
+  title?: string,
+  content?: string,
 }
 
 export default IBook;

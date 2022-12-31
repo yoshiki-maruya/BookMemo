@@ -1,4 +1,5 @@
 import React from "react";
+import BookList from "../domains/BookList";
 import SideBar from "../domains/SideBar";
 
 const Home: React.FC = () => {
@@ -6,7 +7,7 @@ const Home: React.FC = () => {
     <div className="flex h-screen flex-wrap">
       <SideBar />
       <main className="h-full w-full lg:w-4/5">
-        <h1>Main View</h1>
+        <BookList />
       </main>
     </div>
   );

@@ -1,0 +1,18 @@
+name: CI
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Use NodeJS
+        uses: actions/setup-node@v1 #特定バージョンのnodeを設定するアクション
+        with:
+          node-version: "14.x"
+      - run: npm ci #dependencyのインストール
+      - run: npm run lint #コードフォーマットチェック
+      - run: npm run test #テスト実行
+        env:
+          CI: true #現在の環境がCI環境であることを仮定

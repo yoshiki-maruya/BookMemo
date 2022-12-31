@@ -21,4 +21,4 @@ jobs:
       - run: npm run lint #コードフォーマットチェック
       - run: npm run test #テスト実行
         env:
-          CI: true #現在の環境がCI環境であることを仮定
+          CI: true

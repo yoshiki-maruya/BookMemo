@@ -27,8 +27,8 @@ const BookList: React.FC = () => {
             <thead className="bg-gray-100 text-xs uppercase text-gray-700">
               <tr>
                 <th className="py-3 px-1 text-center">No</th>
-                <th className="py-3 px-6">Product Name</th>
-                <th className="py-3 px-6">Price</th>
+                <th className="py-3 px-6">Title</th>
+                <th className="py-3 px-6">Content</th>
                 <th className="py-3 px-1 text-center">Action</th>
               </tr>
             </thead>

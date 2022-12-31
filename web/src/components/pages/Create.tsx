@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import createBook from "../../services/createBook";
 import IBook from "../../types/IBook";
 
 const Create: React.FC = () => {
+  const navigate = useNavigate();
   const [book, setBook] = React.useState<IBook>();
 
   const handleSubmit = async (
@@ -13,9 +15,10 @@ const Create: React.FC = () => {
       if (book) {
         await createBook(book);
       }
+      navigate('/');
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
-      throw new error;
+      navigate('/error');
     }
   }
 
@@ -46,7 +49,11 @@ const Create: React.FC = () => {
           />
         </div>
         <div className="text-center">
-          <button className="focus:shadow-outline rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700 focus:outline-none">登録</button>
+          <button
+            className="focus:shadow-outline rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700 focus:outline-none"
+          >
+            登録
+          </button>
         </div>
       </form>
     </div>

@@ -3,11 +3,6 @@ import express from "express";
 
 const prisma = new PrismaClient();
 
-type BookType = {
-  title: string,
-  content: string,
-}
-
 export const createBook = async (req: express.Request, res: express.Response) => {
   const {title, content} = req.body;
   try {

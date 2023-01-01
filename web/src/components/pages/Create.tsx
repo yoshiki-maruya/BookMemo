@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import createBook from "../../services/createBook";
 import IBook from "../../types/IBook";
 
@@ -23,7 +23,16 @@ const Create: React.FC = () => {
   }
 
   return (
+
     <div>
+      <div className="mt-5 ml-5">
+        <Link
+          to="/"
+          className="rounded-lg border border-slate-200 bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700"
+        >
+          Back Home
+        </Link>
+      </div>
       <h1 className="pt-16 text-center text-3xl">Create</h1>
       <form className="mb-4 rounded bg-white px-52 pt-6 pb-8" onSubmit={handleSubmit}>
         <div className="mb-4">

@@ -19,7 +19,7 @@ const BookList: React.FC = () => {
         <div className="w-full">
           <Link
             to="/create"
-            className="rounded-lg border border-slate-200 bg-green-500 py-2 px-4 font-bold text-white hover:bg-green-700"
+            className="rounded-lg border border-slate-200 bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700"
           >
             Add New
           </Link>

@@ -2,23 +2,26 @@ name: CI
 on:
   push:
     branches: [main]
+    paths:
+      - "web"
 
 jobs:
   build:
     runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: ./web
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          # token: ${{ secret.PERSONAL_ACCESS_TOKEN }}
           persist-credentials: false
-
       - name: Use NodeJS
         uses: actions/setup-node@v1 #特定バージョンのnodeを設定するアクション
         with:
           node-version: "14.x"
-      - run: cd web
       - run: npm ci #dependencyのインストール
+        working-directory: ./web
       - run: npm run lint #コードフォーマットチェック
       - run: npm run test #テスト実行
         env:

@@ -6,9 +6,7 @@ const Home: React.FC = () => {
   return (
     <div className="flex h-screen flex-wrap">
       <SideBar />
-      <main className="h-full w-full lg:w-4/5">
-        <BookList />
-      </main>
+      <BookList />
     </div>
   );
 };

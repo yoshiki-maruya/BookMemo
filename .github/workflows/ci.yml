@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secret.PERSONAL_ACCESS_TOKEN }}
+          # token: ${{ secret.PERSONAL_ACCESS_TOKEN }}
           persist-credentials: false
 
       - name: Use NodeJS

@@ -10,7 +10,7 @@ const SideBar: React.FC = () => {
   },[navigate])
 
   return (
-    <aside className="h-full w-full bg-blue-200 lg:w-1/5">
+    <aside className="h-full w-full border border-r-gray-300 shadow-md lg:w-1/5">
       <h1 className="mt-5 text-center text-3xl">BookMemo</h1>
       <ul className="mt-10 grid gap-y-9 text-center">
         <SideMenuLink
@@ -19,7 +19,12 @@ const SideBar: React.FC = () => {
         >
           Create
         </SideMenuLink>
-        <li>Read</li>
+        <SideMenuLink
+          onClick={(event) => handleClick(event, '/memory')}
+          className="cursor-pointer"
+        >
+          Memory
+        </SideMenuLink>
         <li>Update</li>
         <li>Delete</li>
       </ul>

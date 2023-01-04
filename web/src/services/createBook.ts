@@ -2,8 +2,8 @@ import axios from 'axios';
 import IBook from '../types/IBook';
 
 async function createBook(item: IBook): Promise<void> {
-  await axios.post(
-    'http://localhost:8000/book',
+  return axios.post(
+    'http://localhost:8000/createbook',
     item,
     {
       headers: {

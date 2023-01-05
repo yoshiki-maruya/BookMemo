@@ -11,7 +11,10 @@ const SideBar: React.FC = () => {
 
   return (
     <aside className="h-full w-full border border-r-gray-300 shadow-md lg:w-1/5">
-      <h1 className="mt-5 text-center text-3xl">BookMemo</h1>
+      <h1
+        className="mt-5 cursor-pointer text-center text-3xl"
+        onClick={(event) => handleClick(event, '/')}
+      >BookMemo</h1>
       <ul className="mt-10 grid gap-y-9 text-center">
         <SideMenuLink
           onClick={(event) => handleClick(event, '/create')}

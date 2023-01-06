@@ -15,15 +15,15 @@ const BookList: React.FC = () => {
 
   return (
     <main className="h-full w-full lg:w-4/5">
-      <div className="mt-5 flex flex-col">
-        <div className="w-full">
+      <div className="mx-auto mt-5 flex w-11/12 flex-col">
+        <div className="justify-center">
           <Link
             to="/create"
             className="rounded-lg border border-slate-200 bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700"
           >
             Add New
           </Link>
-          <div className="relative mt-3 rounded-lg shadow">
+          <div className="relative mt-4 rounded-lg shadow">
             <table className="w-full text-left text-sm text-gray-500">
               <thead className="bg-gray-100 text-xs uppercase text-gray-700">
                 <tr>

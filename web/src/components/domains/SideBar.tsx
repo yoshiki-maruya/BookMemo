@@ -28,8 +28,6 @@ const SideBar: React.FC = () => {
         >
           Memory
         </SideMenuLink>
-        <li>Update</li>
-        <li>Delete</li>
       </ul>
     </aside>
   );
